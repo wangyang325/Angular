@@ -1,0 +1,27 @@
+<div>
+
+  <h5>---------------------------------------------</h5>
+  <br>
+  <a [routerLink]="['/view1']">View1</a>
+  <br>
+  <a [routerLink]="['/view2', '2']">View2</a>
+  <router-outlet></router-outlet>
+  <br>
+  <h5>---------------------------------------------</h5>
+  <br>
+  <a [routerLink]="[{outlets: {product: 'product1'}}]">Product1</a>
+  <br>
+  <a [routerLink]="[{outlets: {product: 'product2'}}]">Product2</a>
+  <br>
+
+  <router-outlet name="product"></router-outlet>
+  <br>
+  <h5>---------------------------------------------</h5>
+  <input appRainbowDirective>
+  <br>
+
+
+
+</div>
+
+

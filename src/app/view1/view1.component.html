@@ -1,0 +1,46 @@
+
+<h1>This is view1</h1>
+<!-- Injectable Banding + variables banding -->
+<h4>ServiceName1: {{service1Name | pipe1}}</h4>
+<br>
+<h4>ServiceName2: {{service2Name}}</h4>
+
+<br>
+<app-details-page [inputParam]='toDetails'></app-details-page>
+<h5>--------------------------------------</h5>
+
+<!-- response programming -->
+<input [formControl]="inputControl">
+<br>
+<h6>{{mProductId}}</h6>
+
+<h5>--------------------------------------</h5>
+<!-- Event banding -->
+<button (click)="doClick($event)" value="Click">Click Me</button>
+
+<h5>--------------------------------------</h5>
+<!-- Jump to other page  -->
+<a [routerLink]="['/view2', 'id: 1']">go to view2</a>
+<br>
+<br>
+<!-- sub router  -->
+<a [routerLink]="['./details']">details</a>
+<router-outlet></router-outlet>
+
+
+<h5>--------------------------------------</h5>
+<!--<app-product1 (receive)="receiveF"></app-product1>-->
+<!--<h6>Get from Product1 by output:  {{receiveF}}</h6>-->
+<br>
+<br>
+<h5>---------------------------------------------</h5>
+<h6>Using the @ViewChild</h6>
+<app-product1></app-product1>
+<app-product2></app-product2>
+<Button (click)="doChangeChild()">Change Child</Button>
+
+<br>
+<br>
+<h5>---------------------------------------------</h5>
+<button (click)="doCallService()">SpringBoot</button>
+<h6>{{returnRs}}</h6>
